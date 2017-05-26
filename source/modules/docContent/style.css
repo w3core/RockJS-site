@@ -1,0 +1,74 @@
+/*[include src="../../doc/style.css"]*/
+@media (min-width:800px) {
+  .markdown-preview, .markdown-preview * {
+    user-select: auto;
+  }
+}
+content {
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+.markdown-preview:not([data-use-github-style]) {
+  font-size: inherit;
+  padding: 1em;
+  overflow: auto;
+  height: 100%;
+}
+pre.editor-colors {
+  font-size: 1.1em;
+  overflow: auto;
+  padding: 1em 1.2em;
+  border-radius: .3em;
+  background: rgb(53,57,65);
+}
+
+.markdown-preview img {
+  display: block;
+  margin: 0 auto;
+  border-radius: .2em;
+  max-width: 100%;
+}
+
+.markdown-preview blockquote {
+  border-left: .3em solid #404651;
+  margin: 1em 0;
+  padding: 0 1em;
+  color: #576879;
+}
+
+.markdown-preview .table-wrapper {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 1em;
+  overflow: auto;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: .2em;
+}
+
+@media (max-height: 400px) {
+  .markdown-preview .table-wrapper {
+    max-height: 300px;
+  }
+}
+
+.markdown-preview table tr > * * + * {margin-left: .4em;}
+
+.markdown-preview table {
+  border-collapse: collapse;
+}
+.markdown-preview table thead {
+  background: rgba(0,0,0,.2);
+}
+.markdown-preview table th {
+  padding: .8em 1em;
+  font-weight: normal;
+  color: #fff;
+}
+.markdown-preview table td {
+  padding: .5em 1em;
+  vertical-align: top;
+}
+.markdown-preview table tbody tr:nth-child(even) {
+  background: rgba(0,0,0,.1);
+}

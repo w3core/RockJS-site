@@ -1,0 +1,10 @@
+<ol>
+~~ for (var i in this.children){ ~~
+<li ~~active(this.children[i])?'class="active"':''~~>
+  <a href="~~this.children[i].anchor~~">~~this.children[i].title~~</a>
+  ~~if(this.children[i].children) {~~
+    ~~compile(this.children[i].children)~~
+  ~~}~~
+</li>
+~~}~~
+</ol>

@@ -1,0 +1,119 @@
+#this {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 5;
+  background: #282c34;
+  box-shadow: 0 0 1em #000;
+}
+#this > * {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 1em .5em;
+  line-height: 1.875em;
+}
+#this > :first-child {
+  margin-left: .5em;
+}
+#this > :last-child {
+  margin-right: .5em;
+}
+#this .brand {
+  margin: 0;
+  padding: .75em 0 0;
+  font-size: 1.5em;
+  line-height: normal;
+  text-shadow: -1px -1px 1px #000;
+}
+#this .logo {
+  display: inline-block;
+  background: url(/*[include src="logo-small-white-low.png" format="base64"]*/) no-repeat left;
+  background-size: 100%;
+  color: transparent;
+  width: 2.5em;
+  height: 2.7em;
+  overflow: hidden;
+  margin: .5em 1em 0 1em;
+}
+
+#this > .search {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+      position: relative;
+      text-align: right;
+}
+#this > .search > input {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  font-family: inherit;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 0.5em rgba(0,0,0,.5), 0 0 0.3em rgba(255,255,255,.1);
+  border-radius: 1em;
+  width: 8.4em;
+  max-width: 8.4em;
+  height: 1.875em;
+  line-height: 1.875em;
+  padding: 0 0 0 1em;
+  color: rgb(171,178,191);
+  transition: all .2s;
+}
+#this > .search > input:focus {
+  width: 100%;
+  max-width: 20em;
+  padding-right: 1em;
+}
+#this .menu {
+  display: block;
+  padding: 0;
+}
+#this .menu > * {
+  display: inline-block;
+  padding: 1em .5em;
+  line-height: 1.875em;
+}
+#this .expander {
+  display: none;
+  margin: 0;
+  padding: 1.25em 1em;
+}
+#this .expander:before {
+  content: "";
+  box-sizing: content-box;
+  display: inline-block;
+  width: 1.8em;
+  height: .2em;
+  border-top: .2em solid #fff;
+  border-bottom: .2em solid #fff;
+  background: #fff;
+  padding: .39em 0;
+  background-clip: content-box;
+}
+#this .expander:active:before {
+  border-color: #31a0e7;
+  background-color: #31a0e7;
+}
+#this .menu > :active, #this .expander:active {
+  background: rgba(255,255,255,.1);
+}
+
+@media (max-width: 800px) {
+  #this {padding: 0 4em 0 0;}
+  #this .menu {display: none;}
+  #this .expander {display: inline-block;}
+  #this .logo {
+    position: absolute;
+    right: 0em;
+  }
+}
+@media (max-width: 365px) {
+  #this .brand {display: none;}
+}
+@media (max-width: 275px) {
+  #this > .search > input {width: 100%;}
+}
