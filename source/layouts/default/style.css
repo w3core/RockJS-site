@@ -86,7 +86,8 @@ sidebar {
       flex-grow: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  overflow: auto;
+  overflow-x: visible;
+  overflow-y: auto;
   z-index: 2;
   padding-right: .3em;
 }
