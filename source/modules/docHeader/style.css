@@ -21,11 +21,12 @@
   margin-right: .5em;
 }
 #this .brand {
+  font-family: monospace;
   margin: 0;
   padding: .75em 0 0;
-  font-size: 1.5em;
+  font-size: 1.796em;
   line-height: normal;
-  text-shadow: -1px -1px 1px #000;
+  text-shadow: 1px 0px 1px #000;
 }
 #this .logo {
   display: inline-block;

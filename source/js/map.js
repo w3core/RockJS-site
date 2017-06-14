@@ -17,6 +17,8 @@
 $R.page
   .define($R.config.generic.page.default.name)
   .title('RockJS - The trusty framework for old school guys!')
+  .module('header-area', null, null, 'docHeader')
+  .module('content-area', null, null, 'docSearchResults')
   .module('content-area', null, null, 'landingContent')
 ;
 
