@@ -8,13 +8,23 @@ content {
   overflow: hidden !important;
   padding: 0 !important;
 }
-.markdown-preview:not([data-use-github-style]) {
+.markdown-preview {
   font-size: inherit;
   padding: 1em;
   overflow: auto;
   height: 100%;
 }
-pre.editor-colors {
+.markdown-preview code {
+  font-size: 1.1em;
+  padding: .2em .5em .3em;
+  border-radius: .2em;
+  line-height: 2;
+  /*white-space: nowrap;*/
+  word-wrap: break-word;
+  color: #98c379;
+  background: rgb(53,57,65);
+}
+.markdown-preview pre.editor-colors {
   font-size: 1.1em;
   overflow: auto;
   padding: 1em 1.2em;
@@ -56,6 +66,7 @@ pre.editor-colors {
 
 .markdown-preview table {
   border-collapse: collapse;
+  margin: 0;
 }
 .markdown-preview table thead {
   background: rgba(0,0,0,.2);
@@ -64,10 +75,12 @@ pre.editor-colors {
   padding: .8em 1em;
   font-weight: normal;
   color: #fff;
+  border: 0 none;
 }
 .markdown-preview table td {
   padding: .5em 1em;
   vertical-align: top;
+  border: 0 none;
 }
 .markdown-preview table tbody tr:nth-child(even) {
   background: rgba(0,0,0,.1);

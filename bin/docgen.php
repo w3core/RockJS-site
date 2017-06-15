@@ -117,7 +117,10 @@ class SiteDoc
 
   function extractCSS ($html) {
     preg_match_all('/<(style)[^>]*>([^\3]+)(<\/\1>)/Ui', $html, $match);
-    return implode($match[2]);
+    $result = implode($match[2]);
+    $result = preg_replace('/\.markdown-preview\[data\-use\-github\-style\][^}]+}/', '', $result);
+    $result = str_replace(':not([data-use-github-style])', '', $result);
+    return $result;
   }
 
   function extractTOC () {

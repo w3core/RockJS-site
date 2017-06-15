@@ -36,21 +36,10 @@ a:active, a.active {
 }
 h1, h2, h3, h4, h5 {
   color: #fff;
-  font-weight: normal;
+  font-weight: normal !important;
   max-width: 100%;
   overflow: hidden;
 }
-code {
-  font-size: 1.1em;
-  padding: .2em .5em .3em;
-  border-radius: .2em;
-  line-height: 2;
-  /*white-space: nowrap;*/
-  word-wrap: break-word;
-  color: #98c379;
-  background: rgb(53,57,65);
-}
-
 #this {
   display: flex;
   flex-direction: column;

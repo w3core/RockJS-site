@@ -135,6 +135,7 @@ html, body {
   color: #98c379;
   border: 1px solid #98c379;
   border-radius: .5em;
+  background-color: rgba(0,0,0,.2);
   font-family: monospace;
   text-transform: uppercase;
   text-align: center;
