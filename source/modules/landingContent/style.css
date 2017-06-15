@@ -1,6 +1,29 @@
 html, body {
   background-color: #202225 !important;
 }
+.content-area:before {
+  content: "";
+  width: 100%;
+  height: 0px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 50em 6em #000;
+  border-radius: 50%;
+  z-index: 2;
+}
+.content-area:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: url(./bg.png) no-repeat center bottom;
+  background-size: contain;
+}
 .module-docHeader {
   background-color: #202225;
   box-shadow: none;
@@ -23,22 +46,35 @@ html, body {
   .module-docHeader .menu {
     display: block;
     position: absolute;
-    right: 0;
+    right: .5em;
     top: 100%;
     margin: 0;
-    border-bottom-left-radius: .5em;
-    box-shadow: -.2em .2em .4em #000;
-    background: rgba(32, 34, 37, .95);
+    border-radius: .5em;
+    box-shadow: 0 0 1em #000;
+    background: rgb(32, 34, 37);
     transform-origin: top right;
     transform: scale(0);
     opacity: 0;
     transition: transform .2s, opacity .2s;
+  }
+  .module-docHeader .menu:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    right: .7em;
+    transform-origin: top right;
+    transform: rotate(45deg);
+    background: rgb(32, 34, 37);
+    box-shadow: -0.17em -0.17em 0.3em rgba(0,0,0,.5);
   }
   .module-docHeader .menu.active {
     transform: scale(1);
     opacity: 1;
   }
   .module-docHeader .menu > * {
+    position: relative;
     display: block;
     padding: 0 1em;
   }
@@ -47,7 +83,7 @@ html, body {
   }
 }
 .module-docHeader .menu a {
-  color: #667;
+  color: #66666f;
 }
 .module-docHeader .menu a:hover {
   color: #98c379;
@@ -61,6 +97,7 @@ html, body {
   display: none;
 }
 .module-docSearchResults {
+  z-index: 4;
   top: 0;
   background: rgba(32, 34, 37, .9);
   /*background: rgba(41, 43, 47, .95);*/
@@ -80,6 +117,7 @@ html, body {
 }
 #this {
   position: absolute;
+  z-index: 3;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -45%);
