@@ -145,3 +145,18 @@ html.mobile #this > .button:active {
   background: #98c379;
   color: #202225;
 }
+@media (max-height:400px) {
+  .content-area {
+    overflow: hidden;
+    padding: 0;
+  }
+  #this {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    overflow: auto;
+    max-height: 100%;
+    padding: 1em;
+  }
+}
