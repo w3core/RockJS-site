@@ -1,9 +1,9 @@
-function module_docContent ($R, $O)
- {
+function module_docContent ($R, $O) {
   this.html = String(/*[include src="index.html" format="STRING"]*/);
   this.css = String(/*[include src="style.css" format="STRING"]*/);
   //this.node = 'wait; error; empty; data; list; item';
   var pages = {};
+  var xhr = null;
 
   this.onCreate = function () {
     $R.tools.addClass($O.DOM, 'markdown-preview');
@@ -13,11 +13,16 @@ function module_docContent ($R, $O)
   }
 
   this.onShow = function (options) {
+    if (xhr && xhr.abort) {
+      xhr.abort();
+      xhr = null;
+    }
     var sections = options._ ? String(options._).split('.') : ['1'];
     var section = sections[0];
     if (pages[section]) $O.DOM.innerHTML = pages[section];
     else {
-      $R.xhr('doc/'+section+'.html', function(response, xhr) {
+      $O.spin.show();
+      xhr = $R.xhr('doc/'+section+'.html', function(response, xhr) {
         if (xhr.status == 200) {
           pages[section] = response;
           $O.DOM.innerHTML = pages[section];
@@ -26,7 +31,8 @@ function module_docContent ($R, $O)
             if (node) node.scrollIntoView();
           }, 0);
         }
+        $O.spin.hide();
       });
     }
   }
- }
+}

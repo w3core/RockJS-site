@@ -12,6 +12,12 @@ function module_docHeader ($R, $O) {
     });
 
     var search = $O.node.search;
+    $R.on('search.start', function(){
+      tools.addClass(search, 'processing');
+    });
+    $R.on('search.end', function(){
+      tools.removeClass(search, 'processing');
+    });
     tools.on('focus', search, onFocusSearch);
     tools.on('input blur', search, function(e){
       if (e.type == 'blur') {
@@ -29,7 +35,7 @@ function module_docHeader ($R, $O) {
   };
 
   function emitSearch (field) {
-    $R.emit('search.doc', {query:field.value, node: field});
+    $R.emit('search', {query:field.value, node: field});
   }
 
   function blurSearch () {

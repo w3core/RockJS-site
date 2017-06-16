@@ -26,7 +26,7 @@ function module_docSearchResults ($R, $O)
       list.innerHTML = '';
     });
     initProvider();
-    $R.on('search.doc', onSearch);
+    $R.on('search', onSearch);
   }
 
   function initProvider () {
@@ -57,7 +57,9 @@ function module_docSearchResults ($R, $O)
         query = e.data && e.data.query ? e.data.query : '';
     if (!query) return list.innerHTML = '';
     if (index) {
+      $R.emit('search.start', query);
       index.search(query, function (error, response) {
+        $R.emit('search.end', query);
         if (e.data.node.value != e.data.query) return;
         data = response;
         if (data.hits) {
