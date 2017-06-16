@@ -35,6 +35,18 @@ html, body {
 .module-docHeader .brand:active {
   color: #fff;
 }
+.module-docHeader .menu a {
+  color: #66666f;
+}
+.module-docHeader .menu a:hover {
+  color: #98c379;
+  text-shadow: 0 0 1em;
+  background: rgba(0,0,0,.4);
+}
+.module-docHeader .menu a:active {
+  color: #fff;
+  background: rgba(255,255,255,.1);
+}
 @media (max-width: 800px) {
   .module-docHeader .logo {
     position: relative !important;
@@ -56,11 +68,13 @@ html, body {
     transform: scale(0);
     opacity: 0;
     transition: transform .2s, opacity .2s;
+    padding: .3em 0;
   }
   .module-docHeader .menu:before {
     content: "";
     display: block;
     position: absolute;
+    margin-top: -.3em;
     width: 1em;
     height: 1em;
     right: .7em;
@@ -81,17 +95,9 @@ html, body {
   #this p {
     text-align: justify;
   }
-}
-.module-docHeader .menu a {
-  color: #66666f;
-}
-.module-docHeader .menu a:hover {
-  color: #98c379;
-  text-shadow: 0 0 1em;
-}
-.module-docHeader .menu a:active {
-  color: #fff;
-  background: none;
+  .module-docHeader .menu a {
+    color: #abb2bf;
+  }
 }
 .sidebar-area {
   display: none;
@@ -135,7 +141,8 @@ html, body {
   color: #98c379;
   border: 1px solid #98c379;
   border-radius: .5em;
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(0,0,0,.3);
+  box-shadow: 0 0 1em #000;
   font-family: monospace;
   text-transform: uppercase;
   text-align: center;
@@ -145,7 +152,7 @@ html.mobile #this > .button:active {
   background: #98c379;
   color: #202225;
 }
-@media (max-height:400px) {
+@media (max-height:600px) {
   .content-area {
     overflow: hidden;
     padding: 0;

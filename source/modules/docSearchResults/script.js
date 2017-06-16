@@ -58,7 +58,7 @@ function module_docSearchResults ($R, $O)
     if (!query) return list.innerHTML = '';
     if (index) {
       index.search(query, function (error, response) {
-        console.log(response);
+        if (e.data.node.value != e.data.query) return;
         data = response;
         if (data.hits) {
           for (var i in data.hits) {
