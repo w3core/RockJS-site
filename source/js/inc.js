@@ -3,8 +3,17 @@
   /*[include src="../lib/prefixfree.js"]*/;
 
   onBoot(function(){
-    $R.on('componentCreate', function(e){
+    $R.on('componentCreate:ready', function(e){
       StyleFix.styleElement(e.target.options.stylesheet);
+    });
+
+    $R.on('pageShow:ready', function(e){
+      if (typeof ga === 'function') {
+        var url = location.href;
+        setTimeout(function(){
+          if (url === location.href) ga('send', 'pageview', location.href, {title: document.title});
+        }, 100);
+      }
     });
   });
 

@@ -55,6 +55,9 @@ html, body {
     position: absolute;
     right: 0;
   }
+  .module-docHeader .expander:active {
+    background: transparent;
+  }
   .module-docHeader .menu {
     display: block;
     position: absolute;
