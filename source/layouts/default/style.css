@@ -18,7 +18,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-color: rgb(40,44,52);
+  background-color: rgb(32, 34, 37);
   color: rgb(171, 178, 191);
 }
 img {border: 0 none;}

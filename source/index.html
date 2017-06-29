@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" prefix="og: http://ogp.me/ns#">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en" prefix="og: http://ogp.me/ns#">
  <head itemscope itemtype="http://schema.org/WebSite">
   <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
@@ -15,11 +15,11 @@
   <meta name="description" content="RockJS is a JavaScript framework inspired by the way you work. From open source to business, you can build a powerful and fast crossplatform software alongside millions of other developers." />
   <meta name="keywords" content="RockJS Rock javascript framework single-page-app spa progressive-web-app cli lazy-loading lazyload flexibility modular layoutmanager" />
 
-  <meta property="og:url" content="https://rock.js.org/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="RockJS &mdash; The trusty framework for old school guys!" />
-  <meta property="og:description" content="RockJS is a JavaScript framework inspired by the way you work. From open source to business, you can build a powerful and fast crossplatform software alongside millions of other developers." />
-  <meta property="og:image" content="https://rock.js.org/assets/og-image.png" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://rock.js.org/" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:title" content="RockJS &mdash; The trusty framework for old school guys!" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:description" content="RockJS is a JavaScript framework inspired by the way you work. From open source to business, you can build a powerful and fast crossplatform software alongside millions of other developers." />
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://rock.js.org/assets/og-image.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RockJS &mdash; The trusty framework for old school guys!" />
@@ -60,8 +60,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png" />
 
   <style>
-    /* Temporary hotfix to preserve white blinking when page reloading */
-    html, body {background-color: rgb(40,44,52);}
+    html, body, .loading-progress {background-color: rgb(32, 34, 37)!important;}
   </style>
  </head>
  <body>

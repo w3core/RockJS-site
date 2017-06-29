@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(40, 44, 52, .8);
+  background: rgba(32, 34, 37, .8);
   text-align: center;
   padding-top: 40%;
 }
@@ -24,6 +24,7 @@ content {
   padding: 1em;
   overflow: auto;
   height: 100%;
+  background: rgb(32, 34, 37);
 }
 .markdown-preview code {
   font-size: 1.1em;
@@ -40,7 +41,7 @@ content {
   overflow: auto;
   padding: 1em 1.2em;
   border-radius: .3em;
-  background: rgb(53,57,65);
+  background: #282c34;
 }
 
 .markdown-preview img {
@@ -67,12 +68,14 @@ content {
   border-radius: .2em;
 }
 
+/*
 @media (max-height: 400px) {
   .markdown-preview .table-wrapper {
     max-height: 300px;
+    white-space: nowrap; 
   }
 }
-
+*/
 .markdown-preview table tr > * * + * {margin-left: .4em;}
 
 .markdown-preview table {

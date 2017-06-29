@@ -3,7 +3,7 @@
   flex-direction: row;
   position: relative;
   z-index: 5;
-  background: #282c34;
+  background: rgb(32, 34, 37);
   box-shadow: 0 0 1em #000;
 }
 #this > * {
