@@ -28,13 +28,6 @@ html, body {
   background-color: #202225;
   box-shadow: none;
 }
-.module-docHeader .brand {
-  text-shadow: 0 0 .5em;
-  color: #98c379;
-}
-.module-docHeader .brand:active {
-  color: #fff;
-}
 .module-docHeader .menu a {
   color: #66666f;
 }
@@ -64,7 +57,7 @@ html, body {
     top: 100%;
     margin: 0;
     border-radius: .5em;
-    box-shadow: 0 0 1em #000;
+    box-shadow: 0 0 1em #000, inset 0 0 0 1px rgba(255,255,255,.05);
     background: rgb(32, 34, 37);
     transform-origin: top right;
     transform: scale(0);
@@ -84,6 +77,8 @@ html, body {
     transform: rotate(45deg);
     background: rgb(32, 34, 37);
     box-shadow: -0.17em -0.17em 0.3em rgba(0,0,0,.5);
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-left: 1px solid rgba(255,255,255,.1);
   }
   .module-docHeader .menu.active {
     transform: scale(1);

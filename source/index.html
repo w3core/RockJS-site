@@ -60,7 +60,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png" />
 
   <style>
-    html, body, .loading-progress {background-color: rgb(32, 34, 37)!important;}
+    html, body, body > .loading-progress {background-color: rgb(32, 34, 37)!important;}
+    body > .loading-progress {
+      text-shadow: -1px 1px 0px rgba(0,0,0,1);
+      color: #abb2bf;
+    }
   </style>
  </head>
  <body>

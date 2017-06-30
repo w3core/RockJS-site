@@ -27,6 +27,17 @@
   font-size: 1.796em;
   line-height: normal;
   text-shadow: 1px 0px 1px #000;
+  text-shadow: 0 0 1em;
+  color: #98c379;
+}
+#this .brand > :last-child {
+  color: #fff;
+}
+#this .brand:hover {
+  color: #31a0e7;
+}
+#this .brand:active {
+  color: #fff;
 }
 #this .logo {
   display: inline-block;
