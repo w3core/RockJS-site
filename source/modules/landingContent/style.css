@@ -109,7 +109,16 @@ html, body {
   z-index: 4;
   top: 0;
   background: rgba(32, 34, 37, .9);
-  /*background: rgba(41, 43, 47, .95);*/
+}
+.module-docSearchResults:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 1px;
+  margin-top: -1px;
+  box-shadow: 0 0 .5em .25em #000;
 }
 .module-docSearchResults .entry {
   padding: .5em 1em;
